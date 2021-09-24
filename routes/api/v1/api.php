@@ -27,6 +27,7 @@ Route::prefix('/usuarios')->group(function(){
     Route::middleware('auth:api')->get('/buscar','App\Http\Controllers\UserController@buscarUsuario');
     Route::middleware('auth:api')->get('/informacion','App\Http\Controllers\UserController@informacion');
     Route::middleware('auth:api')->post('/guardar','App\Http\Controllers\UserController@guardar');
+    Route::middleware('auth:api')->post('/reiniciar-passsword','App\Http\Controllers\UserController@reiniciarPasssword');
 });
 
 Route::prefix('/menu')->group(function(){

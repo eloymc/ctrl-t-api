@@ -17,13 +17,13 @@ class CreateDireccionsTable extends Migration
             $table->id();
             $table->string('calle',100);
             $table->string('no_ext',100);
-            $table->string('no_int',100);
+            $table->string('no_int',100)->nullable();
             $table->string('colonia',100);
             $table->string('municipio',100);
             $table->string('estado',100);
             $table->string('pais',50);
             $table->string('cp',5);
-            $table->text('referencia');
+            $table->text('referencia')->nullable();
             $table->timestamps();
         });
     }
